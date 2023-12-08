@@ -3,6 +3,8 @@
 using namespace std;
 
 
+const int DEFAULT_SIZE = 3;
+
 template<class T>
 class QuickQueue 
 {
@@ -10,19 +12,20 @@ class QuickQueue
     private:
         // internal storage of QuickQueue is a dynamically allocated array of pointers
         T** myList;
-        int size;
+        int current_size;
         int capacity;
 
     public:
         void Enqueue(T* item);
-        T* Dequeue();
+        T Dequeue();
+        void PrintOut();
 
         // constructor
         QuickQueue();
 
         // destructor
         ~QuickQueue();
-        
+
         // deep copy assignment operator overload
         QuickQueue<T>& operator=(const T &item);
 
