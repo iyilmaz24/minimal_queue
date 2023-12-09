@@ -1,5 +1,5 @@
-#include<string.h>
 #include<iostream>
+#include<typeinfo>
 using namespace std;
 
 
@@ -20,8 +20,11 @@ class QuickQueue
         T Dequeue();
         void PrintOut();
 
-        // constructor
+        // default constructor
         QuickQueue();
+
+        // copy constructor
+        QuickQueue(const QuickQueue<T> &item);
 
         // destructor
         ~QuickQueue();
